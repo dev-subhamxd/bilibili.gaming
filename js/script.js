@@ -4,12 +4,12 @@
    ========================================================= */
 
 const ROSTER = [
-  { tag: "Knight",  name: "Liu Yuxiang · 刘宇翔",   role: "Player",  meta: "China",   accent: "pink" },
-  { tag: "whzy",    name: "Wang Haozhe · 王昊哲",   role: "Player",  meta: "China",   accent: "cyan" },
-  { tag: "rushia",  name: "Wang Xiaojie · 王晓杰",  role: "Player",  meta: "China",   accent: "pink" },
-  { tag: "nephh",   name: "Marcus Tan",             role: "Player",  meta: "Singapore", accent: "cyan" },
-  { tag: "bud",     name: "Yang Renyu · 杨韧余",    role: "Player",  meta: "China",   accent: "pink" },
-  { tag: "yilai",   name: "Gu Yiming · 顾依铭",     role: "Rookie",  meta: "Signed 2026", accent: "cyan" },
+  { tag: "Knight",  name: "Liu Yuxiang · 刘宇翔",   role: "Player",  meta: "China",      flag: "🇨🇳", accent: "pink" },
+  { tag: "whzy",    name: "Wang Haozhe · 王昊哲",   role: "Player",  meta: "China",      flag: "🇨🇳", accent: "cyan" },
+  { tag: "rushia",  name: "Wang Xiaojie · 王晓杰",  role: "Player",  meta: "China",      flag: "🇨🇳", accent: "pink" },
+  { tag: "nephh",   name: "Marcus Tan",             role: "Player",  meta: "Singapore",  flag: "🇸🇬", accent: "cyan" },
+  { tag: "bud",     name: "Yang Renyu · 杨韧余",    role: "Player",  meta: "China",      flag: "🇨🇳", accent: "pink" },
+  { tag: "yilai",   name: "Gu Yiming · 顾依铭",     role: "Rookie",  meta: "Signed 2026",flag: "🇨🇳", accent: "cyan" },
 ];
 
 const STAFF = [
@@ -89,16 +89,20 @@ const DANMAKU_LINES = [
 /* ---------- render roster ---------- */
 function renderRoster(){
   const grid = document.getElementById("rosterGrid");
-  grid.innerHTML = ROSTER.map(p => `
+  grid.innerHTML = ROSTER.map((p, i) => `
     <article class="player-card${p.accent === 'cyan' ? ' is-cyan' : ''}">
-      <span class="corner tl"></span>
+      <div class="player-portrait">
+        <span class="portrait-mono" aria-hidden="true">${p.tag.charAt(0)}</span>
+        <span class="portrait-num mono">P.${String(i + 1).padStart(2, '0')}</span>
+        <span class="portrait-scan" aria-hidden="true"></span>
+      </div>
       <span class="corner br"></span>
       <span class="player-role">${p.role}</span>
       <h3 class="player-tag">${p.tag}</h3>
       <p class="player-name">${p.name}</p>
       <div class="player-meta">
         <span class="player-meta-label">REGION</span>
-        <span class="player-meta-value">${p.meta}</span>
+        <span class="player-meta-value">${p.flag} ${p.meta}</span>
       </div>
     </article>
   `).join("");
