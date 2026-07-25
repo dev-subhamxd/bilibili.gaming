@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BLG · Bilibili Gaming Valorant Division</title>
+<meta name="description" content="Bilibili Gaming — Valorant Division. Roster, staff, achievements and results.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2307070b'/%3E%3Ctext x='50' y='68' font-family='Rajdhani, sans-serif' font-weight='700' font-size='54' fill='%23fb7299' text-anchor='middle'%3EB%3C/text%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="scanlines"></div>
+<div class="danmaku-layer" id="danmakuLayer" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#home" class="nav-brand">
+      <span class="brand-mark">BLG</span>
+      <span class="brand-sub">无畏契约分部</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#about"><span class="idx">01</span>Origin</a>
+      <a href="#roster"><span class="idx">02</span>Roster</a>
+      <a href="#staff"><span class="idx">03</span>Staff</a>
+      <a href="#achievements"><span class="idx">04</span>Record</a>
+      <a href="#results"><span class="idx">05</span>Results</a>
+    </nav>
+
+    <div class="nav-status">
+      <span class="pulse-dot"></span>
+      <span class="mono">CN&nbsp;#5</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="home">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow--pink" aria-hidden="true"></div>
+  <div class="hero-glow hero-glow--cyan" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <p class="eyebrow reveal">
+      <span class="eyebrow-tag">VCT CHINA</span>
+      <span class="eyebrow-dash">/</span>
+      <span>EST. FEBRUARY 2023</span>
+    </p>
+
+    <h1 class="hero-title reveal" data-text="BILIBILI GAMING">
+      <span class="line">BILIBILI</span>
+      <span class="line hero-title--accent">GAMING</span>
+    </h1>
+
+    <p class="hero-sub reveal">VALORANT DIVISION <span class="dot">·</span> 无畏契约分部</p>
+
+    <p class="hero-desc reveal">
+      Owned by China's biggest video platform, built for the broadcast it streams on.
+      From an open qualifier in February 2023 to a Champions stage that August —
+      BLG plays every round like the chat is watching. Because it always is.
+    </p>
+
+    <div class="hero-stats reveal">
+      <div class="hstat">
+        <span class="hstat-num mono">#5</span>
+        <span class="hstat-label">China Rank</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-num mono">70–64</span>
+        <span class="hstat-label">Career Record</span>
+      </div>
+      <div class="hstat-div"></div>
+      <div class="hstat">
+        <span class="hstat-num mono">$166,191</span>
+        <span class="hstat-label">Total Winnings</span>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue reveal" aria-label="Scroll to content">
+      <span>SCROLL</span>
+      <span class="scroll-line"><span class="scroll-line-fill"></span></span>
+    </a>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack">
+    <!-- duplicated via JS for seamless loop -->
+    <span>VCT 2023 CHAMPIONS — DEBUT 7TH–8TH · $50,000</span>
+    <span class="sep">//</span>
+    <span>CHINA EVOLUTION SERIES 2026: ACT 1 — 1ST</span>
+    <span class="sep">//</span>
+    <span>VCT 2025 CHINA STAGE 2 PLAYOFFS — 1ST</span>
+    <span class="sep">//</span>
+    <span>VALORANT CHAMPIONS 2025 — GROUP STAGE</span>
+    <span class="sep">//</span>
+    <span>ESPORTS WORLD CUP 2025 — GROUP A</span>
+    <span class="sep">//</span>
+    <span>MASTERS TORONTO 2025 — SWISS STAGE</span>
+    <span class="sep">//</span>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-num mono">01</span>
+      <h2 class="section-title">THE ORIGIN</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="lede">
+          Bilibili Gaming is a Chinese esports organization owned by
+          <strong>Bilibili.com</strong> — the platform that turned scrolling bullet
+          comments into a national pastime. The Valorant division launched in
+          February 2023, and by the end of that same month the roster was already
+          fighting through open qualifiers.
+        </p>
+        <p>
+          Six months later, BLG closed their rookie Champions Tour campaign at
+          <strong>7th–8th place at Valorant Champions 2023</strong> in Los Angeles,
+          banking $50,000 against rosters with years of a head start. It set the tone:
+          BLG doesn't rebuild quietly. They reload in public, on stream, in China's
+          most contested region.
+        </p>
+        <p>
+          Since then the org has swung between heartbreak and hardware — a runners-up
+          finish at VCT 2024 China Kickoff, a Stage 2 title in 2025, an Evolution
+          Series trophy in 2026 — every arc playing out in front of the platform
+          that made them.
+        </p>
+      </div>
+
+      <div class="about-facts reveal">
+        <div class="fact-card">
+          <span class="fact-label mono">FOUNDED</span>
+          <span class="fact-value">February 2023</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label mono">OWNER</span>
+          <span class="fact-value">Bilibili.com</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label mono">REGION</span>
+          <span class="fact-value">China</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label mono">DIVISION</span>
+          <span class="fact-value">VALORANT</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label mono">DEBUT EVENT</span>
+          <span class="fact-value">FGC Invitational 2023: Act 1</span>
+        </div>
+        <div class="fact-card">
+          <span class="fact-label mono">SIGNATURE RUN</span>
+          <span class="fact-value">Champions 2023 — 7th–8th</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ROSTER ============ -->
+<section class="section roster" id="roster">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-num mono">02</span>
+      <h2 class="section-title">ACTIVE ROSTER</h2>
+    </div>
+    <p class="section-kicker reveal">Six names on the server list. One crest on the jersey.</p>
+
+    <div class="roster-grid" id="rosterGrid">
+      <!-- cards injected by JS from data, see js/script.js -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ STAFF ============ -->
+<section class="section staff" id="staff">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-num mono">03</span>
+      <h2 class="section-title">BEHIND THE GLASS</h2>
+    </div>
+    <p class="section-kicker reveal">The people drafting strats while the danmaku scrolls past.</p>
+
+    <div class="staff-grid" id="staffGrid">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ ACHIEVEMENTS ============ -->
+<section class="section achievements" id="achievements">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-num mono">04</span>
+      <h2 class="section-title">TRACK RECORD</h2>
+    </div>
+    <p class="section-kicker reveal">Every stage, in the order it happened.</p>
+
+    <div class="timeline" id="timeline">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section class="section results" id="results">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <span class="section-num mono">05</span>
+      <h2 class="section-title">RECENT RESULTS</h2>
+    </div>
+    <p class="section-kicker reveal">Latest scorelines from the China circuit.</p>
+
+    <div class="results-list" id="resultsList">
+      <!-- injected by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA / FOOTER ============ -->
+<section class="cta">
+  <div class="cta-inner reveal">
+    <h2 class="cta-title">冲鸭, BLG.</h2>
+    <p class="cta-sub">Next map. Same crest. Follow the division across the China stage.</p>
+    <div class="cta-links">
+      <a href="https://x.com/BilibiliGaming" target="_blank" rel="noopener">X / Twitter</a>
+      <a href="https://weibo.com/u/7871626559" target="_blank" rel="noopener">Weibo</a>
+      <a href="https://space.bilibili.com/3546389824932395" target="_blank" rel="noopener">Bilibili Space</a>
+      <a href="https://liquipedia.net/valorant/Bilibili_Gaming" target="_blank" rel="noopener">Liquipedia</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span class="mono">BLG // VALORANT DIVISION</span>
+    <span class="mono footer-note">Unofficial fan concept · Roster &amp; results via Liquipedia and VLR.gg · Not affiliated with Bilibili Gaming or Riot Games</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
